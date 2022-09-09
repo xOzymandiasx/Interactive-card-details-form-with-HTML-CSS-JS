@@ -1,98 +1,120 @@
-body, html {
-    height: 100%;
-    background-color: #fff;
+body,
+html {
+  height: 100%;
+  background-color: #fff;
 }
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 main {
-    width: 100%;
-    display: flex;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 60%;
-    background-image: url(../images/bg-main-desktop.png);
-    background-repeat: no-repeat;
-    background-size: 55% 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 58%;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 55% 100%;
 }
 
 .divCard {
-    position: relative;
-    margin-right: 10%;
+  position: relative;
+  margin-right: 10%;
 }
 
 svg {
-    position: absolute;
-    left: 7%;
-    top: 10%;
+  position: absolute;
+  left: 7%;
+  top: 10%;
 }
 
-.cardN, .cName, .cDate {
-    position: absolute;
+.cardN,
+.cName,
+.cDate {
+  position: absolute;
 }
 
 .cardN {
-    font-size: 1.8rem;
-    top: 58%;
-    left: 22%;
+  font-size: 1.8rem;
+  top: 58%;
+  left: 22%;
 }
 
-.cName, .cDate {
-    font-size: 1.1rem;
-    top: 80%;
-
+.cName,
+.cDate {
+  font-size: 1.1rem;
+  top: 80%;
 }
 
 .cName {
-    left: 8%;
+  left: 8%;
 }
 
 .cDate {
-    left: 80%;
+  left: 80%;
 }
 
 .form {
-    display: flex;
-    height: 100%;
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 42%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .backC {
-    margin-left: 5%;
+  margin-left: 8%;
 }
 
 form {
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-input, button {
-    width: 268px;
-    height: 35px;
-    border-radius: 10px;
+input,
+button {
+  width: 310px;
+  height: 42px;
+  border-radius: 10px;
+  padding: 2%;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-#month, #year {
-    width: 65px;
+#month,
+#year {
+  width: 82px;
 }
 
 #cvc {
-    width:130px
+  width: 140px;
+  display: flex;
+  flex-direction: column;
 }
+
+.expire {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+/* label {
+    display: flex;
+    flex-direction: column;
+} */
