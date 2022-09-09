@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    background-color: #fff;
 }
 
 * {
@@ -31,11 +32,34 @@ main {
     margin-right: 10%;
 }
 
-span {
-    font-size: 1.8rem;
+svg {
     position: absolute;
+    left: 7%;
+    top: 10%;
+}
+
+.cardN, .cName, .cDate {
+    position: absolute;
+}
+
+.cardN {
+    font-size: 1.8rem;
     top: 58%;
     left: 22%;
+}
+
+.cName, .cDate {
+    font-size: 1.1rem;
+    top: 80%;
+
+}
+
+.cName {
+    left: 8%;
+}
+
+.cDate {
+    left: 80%;
 }
 
 .form {

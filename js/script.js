@@ -3,8 +3,6 @@ const $cardValue = document.querySelector("#cNumber");
 const $form = document.querySelector("form");
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const $cardValue = document.querySelector("#cNumber");
-  console.log($cardValue.value);
 });
 
 $cardValue.addEventListener("keyup", (e) => {
