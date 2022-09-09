@@ -26,10 +26,16 @@ main {
     background-size: 55% 100%;
 }
 
+.divCard {
+    position: relative;
+    margin-right: 10%;
+}
+
 span {
-    font-size: 1rem;
+    font-size: 1.8rem;
     position: absolute;
-    top: 70%;
+    top: 58%;
+    left: 22%;
 }
 
 .form {
@@ -39,10 +45,6 @@ span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.frontC {
-    margin-right: 15%;
 }
 
 .backC {
