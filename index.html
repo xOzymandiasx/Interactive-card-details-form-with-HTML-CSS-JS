@@ -10,28 +10,33 @@
   <body>
     <main class="container">
       <section class="card">
-        <div class="divCard">
+        <div class="divCardF">
           <img  class="frontC" src="images/bg-card-front.png" alt="">
           <span class="cardN">0000 0000 0000 0000</span>
           <span class="cName">Jane Appleseed</span>
           <span class="cDate">00/00</span>
           <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
         </div>
-        <img class="backC" src="images/bg-card-back.png" alt="">
+        <div class="divCardB">
+          <img class="backC" src="images/bg-card-back.png" alt="">
+          <span class="cvcBC">000</span>
+        </div>
       </section>
       <section class="form">
         <form>
-          <label for="name">
+          <label for="name" class="fName">CARDHOLDER NAME
             <input type="text" id="name">
           </label>
-          <label for="cNumber">
+          <label for="cNumber" class="cNumber">CARD NUMBER
             <input type="text" id="cNumber">
           </label>
           <div class="expire">
-            <label for="month">
-              <input type="text" id="month">
-              <label for="year">
-                <input type="text" id="year">
+              <label for="month"> EXP. DATE (MM/YY)
+                <div>
+                  <input type="text" id="month">
+                  <label for="year">
+                  <input type="text" id="year">
+                </div>
               </label>
             </label>
             <label for="cvc">CVC

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
 body,
 html {
   height: 100%;
   background-color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 * {
@@ -28,9 +31,13 @@ main {
   background-size: 55% 100%;
 }
 
-.divCard {
+.divCardF {
   position: relative;
   margin-right: 10%;
+}
+
+.divCardB {
+  position: relative;
 }
 
 svg {
@@ -39,16 +46,22 @@ svg {
   top: 10%;
 }
 
+.cvcBC {
+  top: 44%;
+  left: 88%;
+}
+
 .cardN,
 .cName,
-.cDate {
+.cDate,
+.cvcBC {
   position: absolute;
 }
 
 .cardN {
   font-size: 1.8rem;
   top: 58%;
-  left: 22%;
+  left: 15%;
 }
 
 .cName,
@@ -96,6 +109,11 @@ button {
   text-align: center;
 }
 
+.fName, .cNumber, #cvc {
+  display: flex;
+  flex-direction: column;
+}
+
 #month,
 #year {
   width: 82px;
@@ -103,8 +121,6 @@ button {
 
 #cvc {
   width: 140px;
-  display: flex;
-  flex-direction: column;
 }
 
 .expire {
@@ -113,8 +129,3 @@ button {
   align-items: end;
   justify-content: space-between;
 }
-
-/* label {
-    display: flex;
-    flex-direction: column;
-} */
