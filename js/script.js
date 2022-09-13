@@ -1,6 +1,23 @@
 const $form = document.querySelector("form");
+const $numberV = document.querySelector("#cNumber");
+const validateCNumber = () => {
+  let mError = document.querySelectorAll(".error")[1];
+  let correctid = $numberV.value.split(" ")
+  if ($numberV.value === "") {
+    mError.textContent = "Cant be empty";
+  } else if ($numberV.value.match(/[^0-9\s]/g)) {
+    mError.textContent = "Wrong format, numbers only";
+  } else if ($numberV.value.length < 19 || correctid[0] < 4 || correctid[1] < 4 || correctid[2] < 4 || correctid[3] < 4) {
+    mError.textContent = "Invalid id card";
+  } else {
+    mError.textContent = "";
+    return true;
+  }
+};
+
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
+  validateCNumber();
 });
 
 document.addEventListener("keyup", (e) => {
