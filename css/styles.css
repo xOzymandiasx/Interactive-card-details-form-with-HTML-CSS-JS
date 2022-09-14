@@ -171,6 +171,15 @@ button:hover {
   justify-content: space-between;
 }
 
+.dyError {
+  display: flex;
+  width: 100%;
+}
+
+.yError {
+  width: 59%;
+}
+
 .error {
   color: crimson;
 }
