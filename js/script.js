@@ -1,9 +1,28 @@
+const date = new Date();
 const $form = document.querySelector("form");
 const $nameV = document.querySelector("#name");
 const $numberV = document.querySelector("#cNumber");
 const $monthV = document.querySelector("#month");
 const $yearV = document.querySelector("#year");
 const $cvcV = document.querySelector("#cvc");
+
+const changeDisplay = (html1, html2) => {
+  document.querySelector(`.${html1}`).classList.add("displayOn");
+  document.querySelector(`.${html1}`).classList.remove("displayOf");
+  document.querySelector(`.${html2}`).classList.add("displayOf");
+  document.querySelector(`.${html2}`).classList.remove("displayOn");
+};
+
+const resetValues = (element) => {
+  element.value = "";
+}
+
+const setValues = () => {
+  document.querySelector(".cName").textContent = "Jane Appleseed";
+  document.querySelector(".cardN").textContent = "0000 0000 0000 0000";
+  document.querySelector(".cDate").textContent = "00/00";
+  document.querySelector(".cvcBC").textContent = "000";
+}
 
 const validateName = () => {
   let mError = document.querySelectorAll(".error")[0];
@@ -40,13 +59,11 @@ const validateCNumber = () => {
 
 const validateDate = () => {
   let mError = document.querySelectorAll(".error")[2];
+  let year = date.getFullYear().toString().substring(2, 4);
+  let month = date.getMonth()+1;
   if ($monthV.value === "" || $yearV.value === "") {
     mError.textContent = "Cant be empty";
-  } else if (
-    $monthV.value < 12 ||
-    $monthV.value.length < 2 ||
-    $yearV.value < 2
-  ) {
+  } else if ($monthV.value > 12 || $monthV.value.length < 2 ||$monthV.value < month || $yearV.value < 2 || $yearV.value < year) {
     mError.textContent = "Invalid date";
   } else {
     mError.textContent = "";
@@ -74,6 +91,9 @@ $form.addEventListener("submit", (e) => {
   validateName();
   validateDate();
   validateCVC();
+  if (validateCNumber() &&validateName()&&validateDate()&&validateCVC()) {
+    changeDisplay("success", "form");
+  }
 });
 
 document.addEventListener("keyup", (e) => {
@@ -134,3 +154,20 @@ document.addEventListener("keyup", (e) => {
       : ($cvcC.textContent = $cvcV.value);
   }
 });
+
+document.querySelector(".success").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.matches("#continue")) {
+    resetValues($nameV);
+    resetValues($numberV);
+    resetValues($monthV);
+    resetValues($yearV);
+    resetValues($cvcV);
+    setValues();
+    changeDisplay("form", "success");
+  };
+});
+
+window.addEventListener("load", ()=> {
+  setValues();
+})
