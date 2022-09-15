@@ -85,7 +85,8 @@ main {
   left: 80%;
 }
 
-.form, .success {
+.form,
+.success {
   display: flex;
   height: 100%;
   width: 42%;
@@ -106,15 +107,16 @@ form {
   align-items: center;
 }
 
-label, h2 {
+label,
+h2 {
   color: hsl(278, 68%, 11%);
   font-weight: 700;
 }
 
 input,
 button {
-  width: 330px;
-  height: 42px;
+  width: 20rem;
+  height: 2.5rem;
   border-radius: 10px;
   padding: 1%;
   font-size: 1.2rem;
@@ -135,11 +137,9 @@ input:focus-visible {
   outline: 2px solid hsl(278, 68%, 11%);
 }
 
-
-input:focus::placeholder{
+input:focus::placeholder {
   color: hsl(279, 6%, 55%);
 }
-
 
 button {
   background-color: hsl(278, 68%, 11%);
@@ -163,7 +163,7 @@ button:hover {
 
 #month,
 #year {
-  width: 82px;
+  width: 5rem;
 }
 
 #cvc {
@@ -206,37 +206,84 @@ p {
 }
 
 .displayOf {
-display: none;
+  display: none;
 }
 
 @media (max-width: 900px) {
- :root {
-  font-size: 15px;
- }
+  :root {
+    font-size: 15px;
+  }
 
- img {
-  height: 210px;
-  width: 400px;
- }
+  img {
+    height: 210px;
+    width: 400px;
+  }
 
- .form {
-  margin-right: 1%;
- }
+  .form {
+    margin-right: 1%;
+  }
 
- .backC {
-  margin-left: inherit;
+  .backC {
+    margin-left: inherit;
+  }
+
+  .cvcBC {
+    left: 80%;
+  }
 }
-}
-  /* main {
+
+@media (max-width: 777px) {
+  :root {
+    font-size: 14px;
+  }
+
+  main {
     flex-direction: column;
   }
 
   .card {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     width: 100%;
-    height: 40%;
-    background-size: 100% 80%;
+    height: 18rem;
+    background-size: 100% 100%;
+}
+
+.form {
+  margin-bottom: 1%;
+  height: 55%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+  form {
+    height: 85%;
   }
 
-  .form {
-    height: 60%;
-  } */
+  .divCardF {
+    width: 25rem;
+    height: 12.9rem;
+    z-index: 1;
+    bottom: 32%;
+}
+
+.divCardB {
+  width: 25rem;
+  height: 12.9rem;
+}
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .cLogo {
+    left: 7%;
+    top: 10%;
+    transform: scale(0.5);
+  }
+  .cardN {
+    font-size: 1rem;
+    left: 12%;
+  }
+}
