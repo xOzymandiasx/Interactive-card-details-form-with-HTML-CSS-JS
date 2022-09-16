@@ -129,6 +129,14 @@ input {
   color: hsl(279, 6%, 55%);
 }
 
+.inputOk {
+  border-color: hsl(270, 3%, 87%);
+}
+
+.inputerr {
+  border-color: crimson;
+}
+
 input:focus {
   color: hsl(279, 6%, 55%);
 }
@@ -188,6 +196,7 @@ button:hover {
 
 .error {
   color: crimson;
+  font-weight: 400;
 }
 
 .success {
@@ -265,11 +274,14 @@ p {
     height: 12.9rem;
     z-index: 1;
     bottom: 32%;
+    left: -4%;
+    margin: initial;
 }
 
 .divCardB {
   width: 25rem;
   height: 12.9rem;
+  left: 4%;
 }
 
   img {
@@ -279,11 +291,27 @@ p {
 
   .cLogo {
     left: 7%;
-    top: 10%;
-    transform: scale(0.5);
-  }
-  .cardN {
-    font-size: 1rem;
-    left: 12%;
+    top: 13%;
+    transform: scale(1);
+}
+
+.cardN {
+  font-size: 1.5rem;
+  left: 19%;
+}
+
+.cvcBC {
+  font-size: 1.1rem;
+}
+
+.success {
+  margin: 8% 0% 1%;
+  width: 100%;
+}
+}
+
+@media (max-width: 450px) {
+  :root {
+    font-size: 13px;
   }
 }
