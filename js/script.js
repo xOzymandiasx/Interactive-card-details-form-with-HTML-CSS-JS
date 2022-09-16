@@ -24,13 +24,24 @@ const setValues = () => {
   document.querySelector(".cvcBC").textContent = "000";
 }
 
+const addErrClass = (inp) => {
+  if (inp.classList.contains("inputerr") === false) inp.classList.add("inputerr");
+};
+
+const delErrClass = (inp) => {
+  if (inp.classList.contains("inputerr")) inp.classList.remove("inputerr");
+}
+
 const validateName = () => {
   let mError = document.querySelectorAll(".error")[0];
   if ($nameV.value === "") {
     mError.textContent = "Cant be empty";
+    addErrClass($nameV);
   } else if ($nameV.value.match(/[^a-zA-Z\s]/g)) {
     mError.textContent = "Cant be numbers";
+    addErrClass($nameV);
   } else {
+    delErrClass($nameV);
     mError.textContent = "";
     return true;
   }
@@ -41,8 +52,10 @@ const validateCNumber = () => {
   let correctid = $numberV.value.split(" ");
   if ($numberV.value === "") {
     mError.textContent = "Cant be empty";
+    addErrClass($numberV);
   } else if ($numberV.value.match(/[^0-9\s]/g)) {
     mError.textContent = "Wrong format, numbers only";
+    addErrClass($numberV);
   } else if (
     $numberV.value.length < 19 ||
     correctid[0] < 4 ||
@@ -51,7 +64,9 @@ const validateCNumber = () => {
     correctid[3] < 4
   ) {
     mError.textContent = "Invalid id card";
+    addErrClass($numberV);
   } else {
+    delErrClass($numberV);
     mError.textContent = "";
     return true;
   }
