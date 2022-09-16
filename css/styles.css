@@ -267,6 +267,7 @@ p {
 
   form {
     height: 85%;
+    width: 20.7rem;
   }
 
   .divCardF {
@@ -312,6 +313,6 @@ p {
 
 @media (max-width: 450px) {
   :root {
-    font-size: 13px;
+    font-size: 13.5px;
   }
 }
