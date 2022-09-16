@@ -267,7 +267,6 @@ p {
 
   form {
     height: 85%;
-    width: 20.7rem;
   }
 
   .divCardF {
@@ -305,6 +304,11 @@ p {
   font-size: 1.1rem;
 }
 
+input,
+button {
+  width: 20.7rem;
+}
+
 .success {
   margin: 8% 0% 1%;
   width: 100%;
@@ -315,4 +319,11 @@ p {
   :root {
     font-size: 13.5px;
   }
+
+  input,
+  button {
+  width: 21rem;
+  height: 3rem;
+}
+
 }
