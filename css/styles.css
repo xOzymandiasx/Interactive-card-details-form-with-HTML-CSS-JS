@@ -4,8 +4,7 @@
   font-size: 16px;
 }
 
-body,
-html {
+body, html {
   height: 100%;
   background-color: #fff;
   color: hsl(0, 0%, 100%);
@@ -57,11 +56,7 @@ main {
   left: 88%;
 }
 
-.cardN,
-.cName,
-.cDate,
-.cvcBC,
-.cLogo {
+.cardN, .cName, .cDate, .cvcBC, .cLogo {
   position: absolute;
 }
 
@@ -71,8 +66,7 @@ main {
   left: 15%;
 }
 
-.cName,
-.cDate {
+.cName, .cDate {
   font-size: 1.1rem;
   top: 80%;
 }
@@ -85,8 +79,7 @@ main {
   left: 80%;
 }
 
-.form,
-.success {
+.form, .success {
   display: flex;
   height: 100%;
   width: 42%;
@@ -107,14 +100,12 @@ form {
   align-items: center;
 }
 
-label,
-h2 {
+label, h2 {
   color: hsl(278, 68%, 11%);
   font-weight: 700;
 }
 
-input,
-button {
+input, button {
   width: 20rem;
   height: 2.5rem;
   border-radius: 10px;
@@ -162,15 +153,12 @@ button:hover {
   transition: background-color 0.2s ease-in-out;
 }
 
-.fName,
-.cNumber,
-#cvc {
+.fName, .cNumber, #cvc {
   display: flex;
   flex-direction: column;
 }
 
-#month,
-#year {
+#month, #year {
   width: 5rem;
 }
 
@@ -304,13 +292,12 @@ p {
   font-size: 1.1rem;
 }
 
-input,
-button {
+input, button {
   width: 20.7rem;
 }
 
 .success {
-  margin: 8% 0% 1%;
+  margin: 5rem 0rem 1rem;
   width: 100%;
 }
 }
@@ -320,10 +307,8 @@ button {
     font-size: 13.5px;
   }
 
-  input,
-  button {
+  input, button {
   width: 21rem;
   height: 3rem;
 }
-
 }
